@@ -2,7 +2,8 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>{{document.title}}</title>
+    <!-- <title>{{document.title}}</title> -->
+    <title>Your racist argument is incorrect!</title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -32,6 +33,10 @@
     <div class="content">
       {{document.content}}
     </div>
+
+    @:for "arguments.document.sections": {
+      <li><a href="#{{id}}">{{title.content}}</a></li>
+    } 
 
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
